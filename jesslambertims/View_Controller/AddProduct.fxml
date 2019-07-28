@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="425" prefWidth="700" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jesslambertims.View_Controller.AddProductController">
+
+    <Label fx:id="addProductTitle" layoutX="50" layoutY="50" text="Add Product"></Label> 
+
+    <Label fx:id="prodIDLabel" layoutX="50" layoutY="105" text="ID"></Label>
+    <TextField fx:id="prodIDField" layoutX="125" layoutY="100" disable="true"></TextField>
+    
+    <Label fx:id="prodNameLabel" layoutX="50" layoutY="140" text="Name"></Label>
+    <TextField fx:id="prodNameField" layoutX="125" layoutY="135"></TextField>
+    
+    <Label fx:id="prodInvLabel" layoutX="50" layoutY="175" text="Inventory"></Label>
+    <TextField fx:id="prodInvField" layoutX="125" layoutY="170"></TextField>
+    
+    <Label fx:id="prodPriceLabel" layoutX="50" layoutY="210" text="Price"></Label>
+    <TextField fx:id="prodPriceField" layoutX="125" layoutY="205"></TextField>
+    
+    <Label fx:id="prodMaxLabel" layoutX="50" layoutY="245" text="Max"></Label>
+    <TextField fx:id="prodMaxField" maxWidth="50" layoutX="125" layoutY="240"></TextField>
+    
+    <Label fx:id="prodMinLabel" layoutX="200" layoutY="245" text="Min"></Label>
+    <TextField fx:id="prodMinField" maxWidth="50" layoutX="240" layoutY="240"></TextField>
+
+    
+    <TextField fx:id="partSearch" minHeight="20" maxWidth="125" layoutX="440" layoutY="50"  />
+    <Button minHeight="20" minWidth="75" maxWidth="75" layoutX="570" layoutY="50" fx:id="searchPartBtn" text="Search" mnemonicParsing="false" onAction="#clickSearch" />
+    
+    <TableView fx:id="addPartTable" layoutX="345" layoutY="100" maxHeight="75" maxWidth="300" >
+        <columns>
+            <TableColumn fx:id="addPartTablePartID" text="Part ID" prefWidth="75" >
+                </TableColumn>
+            <TableColumn fx:id="addPartTablePartName" text="Part Name" prefWidth="75" >
+                </TableColumn>
+            <TableColumn fx:id="addPartTablePartInv" text="Inventory Level" prefWidth="75" >
+                </TableColumn>
+            <TableColumn fx:id="addPartTablePartPrice" text="Price per Unit" prefWidth="75" >
+                </TableColumn>
+        </columns>    
+    </TableView>
+            
+    <Button id="addPart" text="Add" layoutX="570" layoutY="180" minHeight="20" minWidth="75" maxWidth="75" onAction="#handleAdd" />        
+            
+    <TableView fx:id="delPartTable" layoutX="345" layoutY="225" maxHeight="75" maxWidth="300" >
+        <columns>
+            <TableColumn fx:id="delPartTablePartID" text="Part ID" prefWidth="75" >
+                </TableColumn>
+            <TableColumn fx:id="delPartTablePartName" text="Part Name" prefWidth="75" >
+                </TableColumn>
+            <TableColumn fx:id="delPartTablePartInv" text="Inventory Level" prefWidth="75" >
+                </TableColumn>
+            <TableColumn fx:id="delPartTablePartPrice" text="Price per Unit" prefWidth="75" >
+                </TableColumn>
+        </columns>    
+    </TableView>
+    
+    <Button id="deletePart" text="Delete" layoutX="570" layoutY="305" minHeight="20" minWidth="75" maxWidth="75" onAction="#handleDelete" />
+    
+    <HBox fx:id="addPartHBox" layoutX="485" layoutY="360">
+        <Button id="saveProduct" text="Save" minHeight="20" minWidth="75" maxWidth="75" onAction="#addProductClickSave" />
+        <Button id="cancelAddProduct" text="Cancel" minHeight="20" minWidth="75" maxWidth="75" onAction="#addProdCancel" />
+    </HBox>
+    
+</AnchorPane>

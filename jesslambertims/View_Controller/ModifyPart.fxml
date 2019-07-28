@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jesslambertims.View_Controller.ModifyPartController">
+ 
+    <HBox layoutX="50" layoutY="50">
+        <Label fx:id="modifyPartTitle" text="Modify Part"></Label>
+        <RadioButton fx:id="inHouse" mnemonicParsing="false" onAction="#modPartInhouse">
+        <toggleGroup>
+            <ToggleGroup fx:id="OutOrIn" />
+        </toggleGroup>
+        </RadioButton>
+        <Label fx:id="inHouseLabel" text="In-house"></Label>
+        <RadioButton fx:id="outSource" mnemonicParsing="false" onAction="#modPartOutsourced" toggleGroup="$OutOrIn"></RadioButton>
+        <Label fx:id="outSourceLabel" text="Outsourced"></Label>
+    </HBox>
+    
+    <Label fx:id="partIDLabel" layoutX="65" layoutY="105" text="ID"></Label>
+    <TextField fx:id="partIDField" layoutX="165" layoutY="100" disable="true"></TextField>
+    
+    <Label fx:id="partNameLabel" layoutX="65" layoutY="140" text="Name"></Label>
+    <TextField fx:id="partNameField" layoutX="165" layoutY="135"></TextField>
+    
+    <Label fx:id="partInvLabel" layoutX="65" layoutY="175" text="Inventory"></Label>
+    <TextField fx:id="partInvField" layoutX="165" layoutY="170"></TextField>
+    
+    <Label fx:id="partPriceLabel" layoutX="65" layoutY="210" text="Price"></Label>
+    <TextField fx:id="partPriceField" layoutX="165" layoutY="205"></TextField>
+    
+    <Label fx:id="partMaxLabel" layoutX="65" layoutY="245" text="Max"></Label>
+    <TextField fx:id="partMaxField" maxWidth="50" layoutX="165" layoutY="240"></TextField>
+    
+    <Label fx:id="partMinLabel" layoutX="240" layoutY="245" text="Min"></Label>
+    <TextField fx:id="partMinField" maxWidth="50" layoutX="280" layoutY="240"></TextField>
+    
+    <Label fx:id="macOrCompLabel" layoutX="65" layoutY="280"></Label>
+    <TextField fx:id="macOrCompField" layoutX="165" layoutY="275"></TextField>
+    
+    <HBox fx:id="addPartHBox" layoutX="225" layoutY="350">
+        <Button id="savePart" text="Save" onAction="#modPartClickSave" />
+        <Button id="cancelAddPart" text="Cancel" onAction="#modPartCancel" />
+    </HBox>
+    
+</AnchorPane>

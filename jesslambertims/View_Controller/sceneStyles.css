@@ -1,0 +1,30 @@
+/* 
+    Author     : Jessica Lambert
+*/
+#AnchorPane{
+    -fx-background-color: #ddd;
+    -fx-padding: 20 20 20 20;
+}
+#addPartTitle{
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-padding: 0 50 0 0;
+}
+#modifyPartTitle, #modifyProductTitle, #addProductTitle{
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-padding: 0 50 0 0;
+}
+#inHouseLabel{
+    -fx-padding: 0 20 0 0;
+}
+#addPartHBox{
+    -fx-spacing: 10;
+}
+.table-view .column-header .label {
+    -fx-alignment: center-left;
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 9;
+}

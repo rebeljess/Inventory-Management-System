@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import java.util.ArrayList?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<GridPane fx:id="grid" prefHeight="400" prefWidth="850" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jesslambertims.View_Controller.MainScreenController" alignment="CENTER" hgap="10" vgap="10" gridLinesVisible="false" >
+    
+    <Label fx:id="mainTitle" text="Inventory Management System" GridPane.columnIndex="0" GridPane.rowIndex="0" 
+            GridPane.columnSpan="3" >
+    </Label>
+    
+        <VBox fx:id="partsVBox" GridPane.columnIndex="0" GridPane.rowIndex="1" prefWidth="400">
+            
+            <HBox fx:id="partsBoxTop">
+                <Label fx:id="partsTitle" text="Parts" />
+                <TextField fx:id="partSearch" minHeight="20" minWidth="50" />
+                <Button minHeight="20" minWidth="50" fx:id="searchPartBtn" text="Search" onAction="#clickSearch" />
+            </HBox>
+            
+            <TableView fx:id="partsTable" >
+                <columns>
+                    <TableColumn fx:id="partsTablePartID" text="Part ID" prefWidth="93" >
+                        </TableColumn>
+                    <TableColumn fx:id="partsTablePartName" text="Part Name" prefWidth="95" >
+                        </TableColumn>
+                    <TableColumn fx:id="partsTablePartInv" text="Inventory Level" prefWidth="93" >
+                        </TableColumn>
+                    <TableColumn fx:id="partsTablePartPrice" text="Price/Cost per Unit" prefWidth="93" >
+                        </TableColumn>
+                </columns>    
+            </TableView>
+            
+            <HBox fx:id="partsHBox">
+                <Button minHeight="30" minWidth="70" fx:id="addPartBtn" text="Add" onAction="#openAddPart" />
+                <Button minHeight="30" minWidth="70" fx:id="modPartBtn" text="Modify" onAction="#openModifyPart" />
+                <Button minHeight="30" minWidth="70" fx:id="DelPartBtn" text="Delete" onAction="#handleDelete" />
+            </HBox>
+            
+        </VBox>
+        
+        <VBox fx:id="productsVBox" GridPane.columnIndex="2" GridPane.rowIndex="1" prefWidth="400">
+            
+            <HBox fx:id="prodBoxTop">
+                <Label fx:id="prodTitle" text="Products" />
+                <TextField fx:id="prodSearch" minHeight="20" minWidth="50" />
+                <Button minHeight="20" minWidth="50" fx:id="searchProdBtn" text="Search" onAction="#clickProdSearch" />
+            </HBox>
+            
+            <TableView fx:id="prodTable" >
+                <columns>
+                    <TableColumn fx:id="prodTableProdID" text="Product ID" prefWidth="93" >
+                      </TableColumn>
+                    <TableColumn fx:id="prodTableProdName" text="Product Name" prefWidth="95" >
+                      </TableColumn>
+                    <TableColumn fx:id="prodTableProdInv" text="Inventory Level" prefWidth="93" >
+                    </TableColumn>
+                    <TableColumn fx:id="prodTableProdPrice" text="Price per Unit" prefWidth="93" >
+                      </TableColumn>
+                </columns>    
+            </TableView>
+            
+           <HBox fx:id="prodHBox"> 
+               <Button minHeight="30" minWidth="70" fx:id="addProdBtn" text="Add" onAction="#openAddProduct" />
+               <Button minHeight="30" minWidth="70" fx:id="modProdBtn" text="Modify" onAction="#openModifyProduct" />
+               <Button minHeight="30" minWidth="70" fx:id="DelProdBtn" text="Delete" onAction="#handleProdDelete" />
+           </HBox>
+               
+        </VBox>
+    
+    <HBox fx:id="exitHBox" GridPane.columnIndex="2" GridPane.rowIndex="2">
+        <Button minHeight="30" minWidth="70" fx:id="exitBtn" text="Exit" onAction="#handleExit" />
+    </HBox>
+    
+</GridPane>
